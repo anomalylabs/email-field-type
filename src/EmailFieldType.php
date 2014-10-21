@@ -1,4 +1,4 @@
-<?php namespace Streams\Addon\FieldType\Email;
+<?php namespace Anomaly\Streams\FieldType\Email;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 
