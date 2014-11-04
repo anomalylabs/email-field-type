@@ -2,6 +2,36 @@
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
+/**
+ * Class EmailFieldType
+ *
+ * @link          http://anomaly.is/streams-platform
+ * @author        AnomalyLabs, Inc. <hello@anomaly.is>
+ * @author        Ryan Thompson <ryan@anomaly.is>
+ * @package       Anomaly\Streams\Addon\FieldType\Email
+ */
 class EmailFieldType extends FieldTypeAddon
 {
+
+    /**
+     * Base validation rules.
+     *
+     * @var array
+     */
+    protected $rules = ['email'];
+
+    /**
+     * Return the input HTML.
+     *
+     * @return mixed
+     */
+    public function input()
+    {
+        $options = [
+            'class'       => 'form-control',
+            'placeholder' => $this->getPlaceholder(),
+        ];
+
+        return app('form')->email($this->getFieldName(), $this->getValue(), $options);
+    }
 }

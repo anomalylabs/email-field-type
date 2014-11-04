@@ -1,5 +1,6 @@
 <?php
 
 return array(
-    'name' => 'Email',
+    'name'        => 'Email',
+    'description' => 'Email field type.'
 );
