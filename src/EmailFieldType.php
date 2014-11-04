@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\FieldType\Email;
 
-use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
 /**
  * Class EmailFieldType
@@ -10,7 +10,7 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\FieldType\Email
  */
-class EmailFieldType extends FieldTypeAddon
+class EmailFieldType extends FieldType
 {
 
     /**
