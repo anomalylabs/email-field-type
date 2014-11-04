@@ -22,7 +22,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      */
     public function link($title = null, $attributes = [])
     {
-        $email = $this->obfuscate();
+        $email = $this->obfuscated();
 
         return app('html')->mailto($email, $title ? : $email, $attributes);
     }
@@ -36,7 +36,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      */
     public function safe($title = null, $attributes = [])
     {
-        $email = $this->obfuscate();
+        $email = $this->obfuscated();
 
         return app('html')->mailto($email, $title ? : $email, $attributes);
     }
