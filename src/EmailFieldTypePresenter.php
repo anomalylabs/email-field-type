@@ -46,7 +46,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      *
      * @return mixed
      */
-    public function obfuscate()
+    public function obfuscated()
     {
         return app('html')->email($this->resource->getValue());
     }
