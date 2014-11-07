@@ -32,6 +32,6 @@ class EmailFieldType extends FieldType
             'placeholder' => $this->getPlaceholder(),
         ];
 
-        return app('form')->email($this->getFieldName(), $this->getValue(), $options);
+        return app('form')->text($this->getFieldName(), $this->getValue(), $options);
     }
 }
