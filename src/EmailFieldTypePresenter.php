@@ -22,21 +22,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      */
     public function link($title = null, $attributes = [])
     {
-        $email = $this->obfuscated();
-
-        return app('html')->mailto($email, $title ? : $email, $attributes);
-    }
-
-    /**
-     * Return an HTML mailto link with obfuscation.
-     *
-     * @param null  $title
-     * @param array $attributes
-     * @return mixed
-     */
-    public function safe($title = null, $attributes = [])
-    {
-        $email = $this->obfuscated();
+        $email = $this->resource->getValue();
 
         return app('html')->mailto($email, $title ? : $email, $attributes);
     }
