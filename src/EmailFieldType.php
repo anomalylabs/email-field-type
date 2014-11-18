@@ -21,17 +21,16 @@ class EmailFieldType extends FieldType
     protected $rules = ['email'];
 
     /**
-     * Return the input HTML.
+     * Get view data for the input.
      *
-     * @return mixed
+     * @return array
      */
-    public function input()
+    public function getInputData()
     {
-        $options = [
-            'class'       => 'form-control',
-            'placeholder' => $this->getPlaceholder(),
-        ];
+        $data = parent::getInputData();
 
-        return app('form')->text($this->getFieldName(), $this->getValue(), $options);
+        $data['type'] = 'email';
+
+        return $data;
     }
 }
