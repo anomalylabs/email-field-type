@@ -33,4 +33,18 @@ class EmailFieldType extends FieldType
 
         return $data;
     }
+
+    /**
+     * Get view data for the filter.
+     *
+     * @return array
+     */
+    public function getFilterData()
+    {
+        $data = parent::getFilterData();
+
+        $data['type'] = 'text';
+
+        return $data;
+    }
 }
