@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/email-field-type",
+    "name": "anomaly/email-field_type",
     "type": "streams-addon",
     "description": "Email field type.",
     "authors": [
