@@ -14,37 +14,16 @@ class EmailFieldType extends FieldType
 {
 
     /**
-     * Base validation rules.
+     * Field type validation rules.
      *
      * @var array
      */
     protected $rules = ['email'];
 
     /**
-     * Get view data for the input.
+     * The input view.
      *
-     * @return array
+     * @var string
      */
-    public function getInputData()
-    {
-        $data = parent::getInputData();
-
-        $data['type'] = 'email';
-
-        return $data;
-    }
-
-    /**
-     * Get view data for the filter.
-     *
-     * @return array
-     */
-    public function getFilterData()
-    {
-        $data = parent::getFilterData();
-
-        $data['type'] = 'text';
-
-        return $data;
-    }
+    protected $inputView = 'anomaly.field_type.email::input';
 }
