@@ -26,4 +26,12 @@ class EmailFieldType extends FieldType
      * @var string
      */
     protected $inputView = 'anomaly.field_type.email::input';
+
+    /**
+     * The filter view.
+     *
+     * @var string
+     */
+    protected $filterView = 'anomaly.field_type.email::filter';
+
 }
