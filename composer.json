@@ -2,7 +2,12 @@
     "name": "anomaly/email-field_type",
     "type": "streams-addon",
     "description": "An email input field type.",
-    "keywords": ["streams-addon", "email", "pyrocms", "laravel"],
+    "keywords": [
+        "streams-addon",
+        "email",
+        "pyrocms",
+        "laravel"
+    ],
     "homepage": "http://anomaly.is/",
     "version": "1.0.0-alpha",
     "license": "MIT",
