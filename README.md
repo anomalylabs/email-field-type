@@ -23,4 +23,6 @@ The email field type provides an HTML5 email input.
 
 #### Example
 
-	{{ user.email.mailto }}
+	{{ user.email.mailto }} // Template use
+	
+	$user->email->mailto() // API use
