@@ -10,6 +10,12 @@ The email field type provides an HTML5 email input.
 
 - `placeholder` - any string including translatable keys
 
+#### Example
+
+	config => [
+	    'placeholder' => 'name@company.com'
+	]
+
 ## Decorator Methods
 
 - `mailto` - returns a mailto HTML anchor
@@ -17,6 +23,4 @@ The email field type provides an HTML5 email input.
 
 #### Example
 
-	config => [
-	    'placeholder' => 'name@company.com'
-	]
+	{{ user.email.mailto }}
