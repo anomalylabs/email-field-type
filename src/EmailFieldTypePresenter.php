@@ -33,7 +33,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      *
      * @return null|string
      */
-    public function obfuscate()
+    public function obfuscated()
     {
         if (!$email = $this->object->getValue()) {
             return null;
