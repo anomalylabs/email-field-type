@@ -36,4 +36,13 @@ class EmailFieldType extends FieldType
      */
     protected $filterView = 'anomaly.field_type.email::filter';
 
+    /**
+     * Ge the placeholder.
+     *
+     * @return string
+     */
+    public function getPlaceholder()
+    {
+        return $this->placeholder ?: 'example@domain.com';
+    }
 }

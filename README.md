@@ -5,24 +5,3 @@
 #### An email input field type.
 
 The email field type provides an HTML5 email input.
-
-## Configuration
-
-- `placeholder` - any string including translatable keys
-
-#### Example
-
-	config => [
-	    'placeholder' => 'name@company.com'
-	]
-
-## Decorator Methods
-
-- `mailto` - returns a mailto HTML anchor
-- `obfuscate` - returns the obfuscated email 
-
-#### Example
-
-	{{ user.email.mailto }} // Template use
-	
-	$user->email->mailto() // API use

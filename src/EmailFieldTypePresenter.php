@@ -1,6 +1,7 @@
 <?php namespace Anomaly\EmailFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
+use Collective\Html\HtmlBuilder;
 
 /**
  * Class EmailFieldTypePresenter
@@ -14,7 +15,27 @@ class EmailFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
-     * Return an HTML mailto anchor.
+     * The HTML builder.
+     *
+     * @var HtmlBuilder
+     */
+    protected $html;
+
+    /**
+     * Create a new EmailFieldTypePresenter instance.
+     *
+     * @param HtmlBuilder $html
+     * @param             $object
+     */
+    public function __construct(HtmlBuilder $html, $object)
+    {
+        $this->html = $html;
+
+        parent::__construct($object);
+    }
+
+    /**
+     * Return an HTML mailto link.
      *
      * @param null|string $text
      * @return null|string
@@ -25,7 +46,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
             return null;
         }
 
-        return app('html')->mailto($email, $text);
+        return $this->html->mailto($email, $text);
     }
 
     /**
@@ -39,6 +60,6 @@ class EmailFieldTypePresenter extends FieldTypePresenter
             return null;
         }
 
-        return app('html')->obfuscate($email);
+        return $this->html->obfuscate($email);
     }
 }
