@@ -15,4 +15,4 @@ protected $fields = [
 
 ### `default_value`
 
-The default value of the email address field.
+The default field value. The default value is `null`.

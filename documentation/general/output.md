@@ -1,29 +1,29 @@
 # Output
 
-This field type returns the email address provided.
-
-**Examples:**
+This field type returns the email address by default.
 
 ### `mailto`
 
-Return an HTML mailto link.
+`text` - The text value of the link. If none is provided the email address will be used.
+
+Returns an HTML mailto link.
 
 ```
 // Twig Usage
-{{ entry.example.mailto }}
+{{ entry.example.mailto|raw }} or {{ entry.example.mailto('Ryan Thompson')|raw }}
 
 // API Usage
-$entry->example->mailto();
+$entry->example->mailto; or $entry->example->mailto('Ryan Thompson'); 
 ```
 
 ### `obfuscated`
 
-Return the obfuscated email.
+Return the obfuscated email address.
 
 ```
 // Twig Usage
 {{ entry.example.obfuscated }}
 
 // API Usage
-$entry->example->obfuscated();
+$entry->example->obfuscated;
 ```
