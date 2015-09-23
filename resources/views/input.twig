@@ -5,4 +5,5 @@
         value="{{ field_type.value }}"
         placeholder="{{ trans(field_type.placeholder) }}"
         {{ field_type.disabled ? 'disabled' }}
-        {{ field_type.readonly ? 'readonly' }}>
+        {{ field_type.readonly ? 'readonly' }}
+        {{ field_type.required ? 'required' }}>
