@@ -1,33 +1,49 @@
 # Usage
 
-- [Mailto](#mailto)
-- [Obfuscated](#obfuscated)
+- [Setting Values](#mutator)
+- [Basic Output](#output)
+- [Presenter Output](#presenter)
 
 <hr>
 
-This field type returns the email address by default.
+<a name="mutator"></a>
+## Setting Values
 
-<a name="mailto"></a>
-### `mailto($text = null)`
+You can set the decimal field type value with any valid email.
 
-`$text` - The link text. If none is provided the email address will be used.
+{{ code('php', '$entry->example = "ryan@pyrocms.com";') }}
 
-Returns an HTML mailto link.
+<hr>
 
-    // Twig usage
-    {{ entry.example.mailto|raw }} or {{ entry.example.mailto('Ryan Thompson')|raw }}
+<a name="output"></a>
+## Basic Output
 
-    // API usage
-    $entry->example->mailto; or $entry->example->mailto('Ryan Thompson');
+The email field type returns `null` or the email value.
 
-<a name="obfuscated"></a>
-### `obfuscated()`
+{% code php %}
+$entry->example; // ryan@pyrocms.com
+{% endcode %}
 
-Returns the obfuscated email address.
+<hr>
 
-    // Twig usage
-    {{ entry.example.obfuscated }}
+<a name="presenter"></a>
+## Presenter Output
 
-    // API usage
-    $entry->example->obfuscated;
+When accessing the value from a decorated entry, like one in a view, the country field type presenter is returned instead.
 
+#### Mailto Link
+
+Return an HTML mailto link with optional text override.
+
+    {% code php %}
+    $entry->example->mailto();           // <a href="mailto:ryan@pyrocms.com">ryan@pyrocms.com</a>
+    $entry->example->mailto("Email Me"); // <a href="mailto:ryan@pyrocms.com">Email Me</a>
+    {% endcode %}
+
+#### Obfuscation
+
+Returns the obfuscated email value.
+
+    {% code php %}
+    $entry->example->obfuscated(); // &#114;&#121;&#97;&#110;&#64;&#112;&#121;&#114;&#111;&#99;&#109;&#115;&#46;&#99;&#111;&#109;&#10;
+    {% endcode %}
