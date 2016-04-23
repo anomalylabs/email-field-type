@@ -35,15 +35,15 @@ When accessing the value from a decorated entry, like one in a view, the country
 
 Return an HTML mailto link with optional text override.
 
-    {% code php %}
-    $entry->example->mailto();           // <a href="mailto:ryan@pyrocms.com">ryan@pyrocms.com</a>
-    $entry->example->mailto("Email Me"); // <a href="mailto:ryan@pyrocms.com">Email Me</a>
-    {% endcode %}
+{% code php %}
+$entry->example->mailto();
+$entry->example->mailto("Email Me");
+{% endcode %}
 
 #### Obfuscation
 
 Returns the obfuscated email value.
 
-    {% code php %}
-    $entry->example->obfuscated(); // &#114;&#121;&#97;&#110;&#64;&#112;&#121;&#114;&#111;&#99;&#109;&#115;&#46;&#99;&#111;&#109;&#10;
-    {% endcode %}
+{% code php %}
+$entry->example->obfuscated();
+{% endcode %}
