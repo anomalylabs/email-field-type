@@ -9,7 +9,6 @@ use Collective\Html\HtmlBuilder;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\EmailFieldType
  */
 class EmailFieldTypePresenter extends FieldTypePresenter
 {
@@ -37,7 +36,7 @@ class EmailFieldTypePresenter extends FieldTypePresenter
     /**
      * Return an HTML mailto link.
      *
-     * @param null|string $text
+     * @param  null|string $text
      * @return null|string
      */
     public function mailto($text = null)

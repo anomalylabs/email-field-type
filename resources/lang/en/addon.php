@@ -3,5 +3,5 @@
 return [
     'title'       => 'Email',
     'name'        => 'Email Field Type',
-    'description' => 'An email input field type.'
+    'description' => 'An email input field type.',
 ];

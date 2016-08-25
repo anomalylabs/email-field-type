@@ -2,7 +2,7 @@
 
 return [
     'default_value' => [
-        'name' => 'Alapértelmezett Érték',
+        'name'     => 'Alapértelmezett Érték',
     'instructions' => 'Add meg az alapértelmezett értéket, ha szeretnéd.',
     ],
 ];
