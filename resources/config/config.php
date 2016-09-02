@@ -2,6 +2,9 @@
 
 return [
     'default_value' => [
-        'type' => 'anomaly.field_type.email',
+        'type'  => 'anomaly.field_type.email',
+        'rules' => [
+            'nullable',
+        ],
     ],
 ];
