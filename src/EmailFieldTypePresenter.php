@@ -37,15 +37,16 @@ class EmailFieldTypePresenter extends FieldTypePresenter
      * Return an HTML mailto link.
      *
      * @param  null|string $text
+     * @param array $attributes
      * @return null|string
      */
-    public function mailto($text = null)
+    public function mailto($text = null, array $attributes = [])
     {
         if (!$email = $this->object->getValue()) {
             return null;
         }
 
-        return $this->html->mailto($email, $text);
+        return $this->html->mailto($email, $text, $attributes);
     }
 
     /**
