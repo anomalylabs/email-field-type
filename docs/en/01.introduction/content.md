@@ -1,0 +1,63 @@
+## Introduction[](#introduction)
+
+`anomaly.field_type.email`
+
+The email field type provides a secure email input.
+
+
+### Configuration[](#introduction/configuration)
+
+Below is the full configuration available with defaults values:
+
+    "example" => [
+        "type"   => "anomaly.field_type.email",
+        "config" => [
+            "default_value" => null
+        ]
+    ]
+
+###### Configuration
+
+<table class="table table-bordered table-striped">
+
+<thead>
+
+<tr>
+
+<th>Key</th>
+
+<th>Example</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+default_value
+
+</td>
+
+<td>
+
+noreply@example.com
+
+</td>
+
+<td>
+
+The default value.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
