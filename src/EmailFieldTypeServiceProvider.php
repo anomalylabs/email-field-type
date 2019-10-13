@@ -19,6 +19,6 @@ class EmailFieldTypeServiceProvider extends AddonServiceProvider implements Defe
      */
     public function provides()
     {
-        return [EmailFieldType::class];
+        return [EmailFieldType::class, 'anomaly.field_type.email'];
     }
 }
