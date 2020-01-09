@@ -1,4 +1,6 @@
-<?php namespace Anomaly\EmailFieldType;
+<?php
+
+namespace Anomaly\EmailFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 use Collective\Html\HtmlBuilder;

@@ -1,7 +1,3 @@
-<input
-        type="text"
-        class="form-control"
-        name="{{ $field_type->input_name }}"
-        value="{{ $field_type->value }}"
-        placeholder="{{ trans($field_type->placeholder) }}"
->
+<input {!! html_attributes($fieldType->attributes([
+    'type' => 'email',
+])) !!}>
