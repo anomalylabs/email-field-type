@@ -20,5 +20,23 @@ class EmailFieldTypePresenterTest extends TestCase
         $mailto = (string) decorate($fieldType)->mailto();
 
         $this->assertStringContainsString('>test@domain.com</a>', html_entity_decode($mailto));
+
+        $mailto = decorate($fieldType->setValue(null))->mailto();
+
+        $this->assertTrue($mailto === null);
+    }
+
+    public function testObfuscated()
+    {
+        $fieldType = app(EmailFieldType::class)
+            ->setValue('test@domain.com');
+
+        $presenter = decorate($fieldType);
+
+        $this->assertTrue(html_entity_decode($presenter->obfuscated()) === 'test@domain.com');
+
+        $fieldType->setValue(null);
+
+        $this->assertTrue($presenter->obfuscated() === null);
     }
 }
