@@ -15,11 +15,11 @@ class EmailFieldType extends FieldType
 {
 
     /**
-     * Field type validation rules.
+     * Validation rules.
      *
      * @var array
      */
-    protected $rules = [
+    public $rules = [
         'email',
     ];
 
