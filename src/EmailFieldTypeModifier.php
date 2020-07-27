@@ -1,5 +1,6 @@
 <?php namespace Anomaly\EmailFieldType;
 
+use Anomaly\EmailFieldType\Validator\NoLocal;
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeModifier;
 
 /**
@@ -20,7 +21,7 @@ class EmailFieldTypeModifier extends FieldTypeModifier
      */
     public function modify($value)
     {
-        if ($value && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+        if ($value && !$this->validate($value)) {
             $value = null;
         }
 
@@ -35,10 +36,23 @@ class EmailFieldTypeModifier extends FieldTypeModifier
      */
     public function restore($value)
     {
-        if ($value && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+        if ($value && !$this->validate($value)) {
             $value = null;
         }
 
         return parent::restore($value);
+    }
+
+    /**
+     * Validate the email.
+     *
+     * @param $value
+     * @return bool
+     */
+    protected function validate($value)
+    {
+        $parts = explode('@', $value);
+        
+        return (bool) filter_var('https://' . end($parts), FILTER_VALIDATE_URL);
     }
 }
